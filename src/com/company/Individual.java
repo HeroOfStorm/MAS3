@@ -72,7 +72,7 @@ public class Individual {
                 if (stars < 0) {
                     throw new Exception("You must provide qualification for creating instructor");
                 }
-                this.employee = new Chef_Waiter(this, salary, phone, duty, stars);
+                this.employee = new ChefWaiter(this, salary, phone, duty, stars);
             }
         }
 
@@ -121,7 +121,7 @@ public class Individual {
                 if (stars < 0) {
                     throw new Exception("Chef should have stars (rating of mastery) 0 or higher");
                 }
-                this.employee = new Chef_Waiter(this, salary, phone, duty, stars);
+                this.employee = new ChefWaiter(this, salary, phone, duty, stars);
             }
         }
     }

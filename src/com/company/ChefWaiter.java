@@ -5,12 +5,12 @@ import org.jetbrains.annotations.NotNull;
  * @author Serhii Krasnoiarskyi s18943
  *
  */
-public class Chef_Waiter extends Chef implements IWaiter {
+public class ChefWaiter extends Chef implements IWaiter {
 
     private final String phone;
     private Duty duty;
 
-    public Chef_Waiter(@NotNull Individual individual, double salary, String phone, Duty duty, int stars) throws Exception {
+    public ChefWaiter(@NotNull Individual individual, double salary, String phone, Duty duty, int stars) throws Exception {
         super(individual, salary, stars);
         this.duty = duty;
         this.phone = phone;

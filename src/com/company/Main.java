@@ -16,6 +16,8 @@ public class Main {
 
         System.out.println(individual_chef_waiter.asEmployee().getSalary());
         System.out.println(individual_chef.asEmployee().getSalary());
+        ((Chef)individual_chef.asEmployee()).riseCookMastery();
+        System.out.println(individual_chef.asEmployee().getSalary());
 
 
         ////////////////////////////////  (2)Dynamic inheritance \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -51,8 +53,8 @@ public class Main {
         Individual individual_chef_waiter_2 = new Individual("Garry", "Osborn", "Oscorp@corp.ip", 3030.0,"+4839929024",
                 Duty.DISHWASH, 3, EmployeeType.CHEF_WAITER);
 
-        ((Chef_Waiter) individual_chef_waiter_2.asEmployee()).doDuty();
-        ((Chef_Waiter) individual_chef_waiter_2.asEmployee()).riseCookMastery();
+        ((ChefWaiter) individual_chef_waiter_2.asEmployee()).doDuty();
+        ((ChefWaiter) individual_chef_waiter_2.asEmployee()).riseCookMastery();
 
         System.out.println(individual_chef_waiter_2.asEmployee());
 
