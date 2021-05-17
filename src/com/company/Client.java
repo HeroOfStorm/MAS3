@@ -36,8 +36,16 @@ public class Client {
         return loyalty;
     }
 
-    public void setLoyalty(int loyalty) {
-        this.loyalty = loyalty;
+    public void riseLoyalty() {
+        this.loyalty++;
+    }
+
+    public void decreaseLoyalty() {
+        this.loyalty--;
+    }
+
+    public int getDiscount(){
+        return 5*loyalty;
     }
 
     public Individual getIndividual() {
@@ -49,6 +57,7 @@ public class Client {
         return "Client {" +
                 individual.toString() +
                 ", loyalty rating = '" + getLoyalty() + '\'' +
+                ", so your discount is = " + getDiscount() + "% "+
                 '}';
     }
 }

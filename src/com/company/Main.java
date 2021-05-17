@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 
-        //////////////////////////////// (1)Polymorphic calls  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        System.out.println("\n ================================= (1)Polymorphic calls ================================= ");
+        //////////////////////////////// (1)Polymorphism  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        System.out.println("\n ================================= (1)Polymorphism ================================= ");
 
         Individual individual_chef_waiter = new Individual("Gazzo", "Help", "Oscorp@corp.ip", 3500.0,
                 "+7899929024", Duty.CLEANING, 2, EmployeeType.CHEF_WAITER);
@@ -20,8 +20,8 @@ public class Main {
         System.out.println(individual_chef.asEmployee().getSalary());
 
 
-        ////////////////////////////////  (2)Dynamic inheritance \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        System.out.println("\n ================================= (2)Dynamic inheritance ================================= ");
+        ////////////////////////////////  (2)Dynamic  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        System.out.println("\n ================================= (2)Dynamic ================================= ");
 
         Individual individual_waiter = new Individual("Miku", "Deadlo", "DadINSide@gmail.com",
                 1700.0, "+987981437", Duty.TAKE_ORDERS, 0, EmployeeType.WAITER);
@@ -40,12 +40,14 @@ public class Main {
 
         System.out.println("Individual is client: " + individual_client.isClient());
         System.out.println("Individual is employee: " + individual_client.isEmployee());
+        System.out.println(individual_client.asClient());
 
         individual_client.becomeEmployee(EmployeeType.CHEF, 2000.0, null, null, 2);
 
 
         System.out.println("Individual is client: " + individual_client.isClient());
         System.out.println("Individual is employee: " + individual_client.isEmployee());
+        System.out.println(individual_client.asEmployee());
 
 
         //////////////////////////////// (4)Multi \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

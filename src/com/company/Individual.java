@@ -54,27 +54,7 @@ public class Individual {
             throw new Exception("salary must be grater than zero");
         }
 
-        switch (employeeType) {
-            case WAITER -> {
-                if (duty == null && phone == null) {
-                    throw new Exception("To create waiter you must pass phone and duty for ");
-                }
-                this.employee = new Waiter(this, salary, phone, duty);
-
-            }
-            case CHEF -> {
-                if (stars < 0) {
-                    throw new Exception("To create chef you must qualification for creating ");
-                }
-                this.employee = new Chef(this, salary, stars);
-            }
-            case CHEF_WAITER -> {
-                if (stars < 0) {
-                    throw new Exception("You must provide qualification for creating instructor");
-                }
-                this.employee = new ChefWaiter(this, salary, phone, duty, stars);
-            }
-        }
+        this.becomeEmployee(employeeType, salary, phone, duty, stars);
 
         people.add(this);
     }
@@ -144,14 +124,14 @@ public class Individual {
 
     public Employee asEmployee() throws Exception {
         if (this.employee == null) {
-            throw new Exception("This person is not an employee");
+            throw new Exception("Employment not defined");
         }
         return this.employee;
     }
 
     public Client asClient() throws Exception {
         if (this.client == null) {
-            throw new Exception("This person is not a client");
+            throw new Exception("Client account not defined");
         }
         return this.client;
     }

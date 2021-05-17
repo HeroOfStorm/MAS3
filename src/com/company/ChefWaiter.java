@@ -36,10 +36,16 @@ public class ChefWaiter extends Chef implements IWaiter {
     public String toString() {
         return "Instructor_Seller {" +
                 "duty = " + duty +
+                "Contact phone" + phone +
                 ", qualification = " + super.getStars() +
                 '}';
     }
 
+    /**
+     * Gets the total income of a person.
+     * @return
+     * double (base salary + bonus from duty)
+     */
     @Override
     public double getSalary() {
         return super.getSalary() + (super.getRawSalary() * 0.3 * duty.getNumVal());
